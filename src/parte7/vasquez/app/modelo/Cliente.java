@@ -3,12 +3,12 @@ package parte7.vasquez.app.modelo;
 import java.util.Objects;
 
 public class Cliente {
-    private int id;
+    private Integer id;
     private String nombre;
     private String apellido;
-    private static int ultimoId;
+    private static Integer ultimoId;
 
-    public Cliente(int id, String nombre, String apellido) {
+    public Cliente(Integer id, String nombre, String apellido) {
         this();
         this.id = id;
         this.nombre = nombre;
@@ -19,11 +19,11 @@ public class Cliente {
         this.id = ++ultimoId;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -3,6 +3,7 @@ package parte7.vasquez.app.repositorio;
 import parte7.vasquez.app.modelo.Cliente;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ClienteListRepositorio implements CrudRepositorio, PaginableRepositorio, OrdenableRepositorio {
@@ -49,11 +50,29 @@ public class ClienteListRepositorio implements CrudRepositorio, PaginableReposit
 
     @Override
     public List<Cliente> listar(int desde, int hasta) {
-        return null;
+
+        return dataSource.subList(desde,hasta);
     }
 
     @Override
     public List<Cliente> listar(String campo, Direccion dir) {
-        return null;
+        dataSource.sort((Cliente a, Cliente b) -> {
+                int resultado = 0;
+                if (dir == Direccion.ASC) {
+                    switch (campo) {
+                        case "id" -> resultado = a.getId().compareTo(b.getId());
+                        case "nombre" -> resultado = a.getNombre().compareTo(b.getNombre());
+                        case "apellido" -> resultado = a.getApellido().compareTo(b.getApellido());
+                    }
+                } else if (dir == Direccion.DESC) {
+                    switch (campo) {
+                        case "id" -> resultado = b.getId().compareTo(a.getId());
+                        case "nombre" -> resultado = b.getNombre().compareTo(a.getNombre());
+                        case "apellido" -> resultado = b.getApellido().compareTo(a.getApellido());
+                    }
+                }
+                return resultado;
+            });
+        return dataSource;
     }
 }

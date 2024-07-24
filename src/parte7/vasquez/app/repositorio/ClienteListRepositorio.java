@@ -23,7 +23,7 @@ public class ClienteListRepositorio implements CrudRepositorio, PaginableReposit
     public Cliente porId(int id) {
         Cliente cli = null;
         for (Cliente c : dataSource){
-            if (cli.getId() == id) {
+            if (c.getId() == id) {
                 return c;
             }
         }
@@ -56,7 +56,7 @@ public class ClienteListRepositorio implements CrudRepositorio, PaginableReposit
 
     @Override
     public List<Cliente> listar(String campo, Direccion dir) {
-        dataSource.sort((Cliente a, Cliente b) -> {
+        dataSource.sort((a, b) -> {
                 int resultado = 0;
                 if (dir == Direccion.ASC) {
                     switch (campo) {

@@ -6,11 +6,10 @@ public class Cliente {
     private Integer id;
     private String nombre;
     private String apellido;
-    private static Integer ultimoId;
+    private static int ultimoId;
 
-    public Cliente(Integer id, String nombre, String apellido) {
+    public Cliente(String nombre, String apellido) {
         this();
-        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
     }

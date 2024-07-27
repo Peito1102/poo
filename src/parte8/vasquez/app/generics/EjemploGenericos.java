@@ -35,6 +35,7 @@ public class EjemploGenericos {
         List<ClientePremium> clientesPremiums = fromArrayToList(new ClientePremium[]{new ClientePremium("Jona","Iñoñan")});
         imprimirClientes(clientes);
         System.out.println();
+
         imprimirClientes(clientes2);
         System.out.println();
         imprimirClientes(clientesPremiums);

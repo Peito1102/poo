@@ -16,4 +16,10 @@ public class Animal {
     public String getTipo() {
         return tipo;
     }
+
+    @Override
+    public String toString() {
+        return "nombre='" + nombre + '\'' +
+                ", tipo='" + tipo + '\'';
+    }
 }

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Camion implements Iterable {
-    public List objetos;
+public class Camion<T> implements Iterable<T> {
+    public List<T> objetos;
     private int max;
 
     public Camion(int max) {
@@ -13,7 +13,7 @@ public class Camion implements Iterable {
         this.objetos = new ArrayList();
     }
 
-    public void add(Object obj) {
+    public void add(T obj) {
         if (this.objetos.size() <= max) {
             this.objetos.add(obj);
         } else {
@@ -22,7 +22,7 @@ public class Camion implements Iterable {
     }
 
     @Override
-    public Iterator iterator() {
+    public Iterator<T> iterator() {
         return this.objetos.iterator();
     }
 }

@@ -11,4 +11,8 @@ public class Maquinaria {
         return tipo;
     }
 
+    @Override
+    public String toString() {
+        return  "tipo='" + tipo + '\'';
+    }
 }

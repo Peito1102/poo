@@ -10,4 +10,9 @@ public class Automovil {
     public String getMarca() {
         return marca;
     }
+
+    @Override
+    public String toString() {
+        return "marca='" + marca + '\'';
+    }
 }

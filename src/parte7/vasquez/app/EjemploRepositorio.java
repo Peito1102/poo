@@ -2,7 +2,7 @@ package parte7.vasquez.app;
 
 import parte7.vasquez.app.modelo.Cliente;
 import parte7.vasquez.app.repositorio.ClienteListRepositorio;
-import parte7.vasquez.app.repositorio.CrudRepositorio;
+import parte7.vasquez.app.repositorio.CompletoRepositorio;
 import parte7.vasquez.app.repositorio.Direccion;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 public class EjemploRepositorio {
     public static void main(String[] args) {
 
-        ClienteListRepositorio repo = new ClienteListRepositorio();
+        CompletoRepositorio<Cliente> repo = new ClienteListRepositorio();
         repo.crear(new Cliente("Pepito", "Rojas"));
         repo.crear(new Cliente("Renzo", "Vasquez"));
         repo.crear(new Cliente("Raton", "Mendi"));

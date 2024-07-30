@@ -1,5 +1,5 @@
 package parte7.vasquez.app.repositorio;
 
-public interface CompletoRepositorio extends OrdenableRepositorio, PaginableRepositorio, CrudRepositorio, ContableRepositorio {
+public interface CompletoRepositorio<T> extends OrdenableRepositorio<T>, PaginableRepositorio<T>, CrudRepositorio<T>, ContableRepositorio {
 
 }

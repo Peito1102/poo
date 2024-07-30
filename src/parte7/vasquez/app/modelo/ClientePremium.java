@@ -9,4 +9,5 @@ public class ClientePremium extends Cliente implements Comparable<ClientePremium
     public int compareTo(ClientePremium o) {
         return 0;
     }
+
 }

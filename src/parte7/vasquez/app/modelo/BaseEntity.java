@@ -1,5 +1,7 @@
 package parte7.vasquez.app.modelo;
 
+import java.util.Objects;
+
 public class BaseEntity {
     protected Integer id;
 
@@ -17,4 +19,16 @@ public class BaseEntity {
         this.id = id;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BaseEntity base = (BaseEntity) o;
+        return Objects.equals(id,base.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

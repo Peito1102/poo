@@ -1,6 +1,8 @@
-package parte7.vasquez.app.repositorio;
+package parte7.vasquez.app.repositorio.lista;
 
 import parte7.vasquez.app.modelo.Cliente;
+import parte7.vasquez.app.repositorio.AbstractListRepositorio;
+import parte7.vasquez.app.repositorio.Direccion;
 
 import java.util.ArrayList;
 import java.util.List;

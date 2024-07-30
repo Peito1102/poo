@@ -1,7 +1,6 @@
 package parte7.vasquez.app.repositorio;
 
 import parte7.vasquez.app.modelo.BaseEntity;
-import parte7.vasquez.app.modelo.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;

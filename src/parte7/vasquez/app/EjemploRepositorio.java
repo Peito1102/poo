@@ -1,7 +1,7 @@
 package parte7.vasquez.app;
 
 import parte7.vasquez.app.modelo.Cliente;
-import parte7.vasquez.app.repositorio.ClienteListRepositorio;
+import parte7.vasquez.app.repositorio.lista.ClienteListRepositorio;
 import parte7.vasquez.app.repositorio.CompletoRepositorio;
 import parte7.vasquez.app.repositorio.Direccion;
 

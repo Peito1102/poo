@@ -4,6 +4,7 @@ import parte7.vasquez.app.modelo.Cliente;
 import parte7.vasquez.app.modelo.Producto;
 import parte7.vasquez.app.repositorio.AbstractListRepositorio;
 import parte7.vasquez.app.repositorio.Direccion;
+import parte7.vasquez.app.repositorio.excepciones.LecturaAccesoDatoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 public class ProductoListRepositorio extends AbstractListRepositorio<Producto> {
 
     @Override
-    public void editar(Producto producto) {
+    public void editar(Producto producto) throws LecturaAccesoDatoException {
         Producto pro = porId(producto.getId());
         pro.setDescripcion(producto.getDescripcion());
         pro.setPrecio(producto.getPrecio());

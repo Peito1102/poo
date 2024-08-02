@@ -3,6 +3,7 @@ package parte7.vasquez.app.repositorio.lista;
 import parte7.vasquez.app.modelo.Cliente;
 import parte7.vasquez.app.repositorio.AbstractListRepositorio;
 import parte7.vasquez.app.repositorio.Direccion;
+import parte7.vasquez.app.repositorio.excepciones.LecturaAccesoDatoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 public class ClienteListRepositorio extends AbstractListRepositorio<Cliente> {
 
     @Override
-    public void editar(Cliente cliente) {
+    public void editar(Cliente cliente) throws LecturaAccesoDatoException {
         Cliente cli = this.porId(cliente.getId());
         cli.setNombre(cliente.getNombre());
         cli.setApellido(cliente.getApellido());
@@ -22,9 +23,9 @@ public class ClienteListRepositorio extends AbstractListRepositorio<Cliente> {
         listaOrdenada.sort((a, b) -> {
                 int resultado = 0;
                 if (dir == Direccion.ASC) {
-                    ordenar(campo,a,b);
+                    resultado = ordenar(campo,a,b);
                 } else if (dir == Direccion.DESC) {
-                    ordenar(campo,b,a);
+                    resultado = ordenar(campo,b,a);
                 }
                 return resultado;
             });
